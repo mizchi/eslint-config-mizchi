@@ -2,27 +2,37 @@ parser: babel-eslint
 parserOptions:
   ecmaFeatures:
     jsx: true
-plugins:
-  - flowtype
-  - import
-  - react
 env:
   browser: true
   node: true
   es6: true
+plugins:
+  - prettier
+  - flowtype
+  - import
+  - react
 extends:
-- standard
-- plugin:react/recommended
-- plugin:import/errors
+  - plugin:react/recommended
+  - plugin:import/errors
+  - prettier
+  - prettier/flowtype
+  - prettier/react
 rules:
-  # add more rules
+  # prettier
+  prettier/prettier:
+    - 2
+    -
+      trailingComma: none
+      singleQuote: true
+      semi: false
+  # rules
   prefer-const: 2
   no-unused-vars:
-  - 2
-  - argsIgnorePattern: ^_
+    - 2
+    - argsIgnorePattern: ^_
   no-multiple-empty-lines:
-  - 2
-  - max: 1
+    - 2
+    - max: 1
   # react
   react/prefer-stateless-function: 2
   # import
@@ -38,31 +48,31 @@ rules:
   flowtype/boolean-style: 2
   flowtype/define-flow-type: 2
   flowtype/delimiter-dangle:
-  - 2
-  - never
+    - 2
+    - never
   flowtype/generic-spacing:
-  - 2
-  - never
+    - 2
+    - never
   flowtype/no-dupe-keys: 2
   flowtype/no-primitive-constructor-types: 2
   flowtype/object-type-delimiter:
-  - 2
-  - comma
+    - 2
+    - comma
   flowtype/require-parameter-type:
-  - 2
-  - excludeArrowFunctions: true
+    - 2
+    - excludeArrowFunctions: true
   flowtype/require-return-type:
-  - 2
-  - excludeArrowFunctions: true
+    - 2
+    - excludeArrowFunctions: true
   flowtype/require-valid-file-annotation:
-  - 1
-  - always
-  - annotationStyle: block
+    - 1
+    - always
+    - annotationStyle: block
   flowtype/space-after-type-colon: 2
   flowtype/space-before-type-colon:
-  - 2
-  - never
+    - 2
+    - never
   flowtype/space-before-generic-bracket:
-  - 2
-  - never
+    - 2
+    - never
   flowtype/union-intersection-spacing: 2
