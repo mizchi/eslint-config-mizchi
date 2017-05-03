@@ -50,9 +50,6 @@ rules:
   flowtype/delimiter-dangle:
     - 2
     - never
-  flowtype/generic-spacing:
-    - 2
-    - never
   flowtype/no-dupe-keys: 2
   flowtype/no-primitive-constructor-types: 2
   flowtype/object-type-delimiter:
