@@ -13,6 +13,7 @@ plugins:
   - react
 extends:
   - plugin:react/recommended
+  - plugin:flowtype/recommended
   - plugin:import/errors
   - prettier
   - prettier/flowtype
@@ -45,11 +46,7 @@ rules:
   import/no-commonjs: 2
   import/order: 2
   # flow
-  flowtype/boolean-style: 2
-  flowtype/define-flow-type: 2
-  flowtype/delimiter-dangle:
-    - 2
-    - never
+  flowtype/define-flow-type: 1
   flowtype/no-dupe-keys: 2
   flowtype/no-primitive-constructor-types: 2
   flowtype/object-type-delimiter:
@@ -72,4 +69,3 @@ rules:
   flowtype/space-before-generic-bracket:
     - 2
     - never
-  flowtype/union-intersection-spacing: 2
