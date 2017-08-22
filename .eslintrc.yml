@@ -9,8 +9,9 @@ env:
 plugins:
   - prettier
   - flowtype
-  - import
   - react
+  - import
+  - import-order-autofix
 extends:
   - plugin:react/recommended
   - plugin:flowtype/recommended
@@ -44,7 +45,8 @@ rules:
   import/no-extraneous-dependencies: 2
   import/no-mutable-exports: 2
   import/no-commonjs: 2
-  import/order: 2
+  # import/order: 2
+  import-order-autofix/order: 2
   # flow
   flowtype/define-flow-type: 1
   flowtype/no-dupe-keys: 2
@@ -53,9 +55,6 @@ rules:
     - 2
     - comma
   flowtype/require-parameter-type:
-    - 2
-    - excludeArrowFunctions: true
-  flowtype/require-return-type:
     - 2
     - excludeArrowFunctions: true
   flowtype/require-valid-file-annotation:
