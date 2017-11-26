@@ -11,7 +11,6 @@ plugins:
   - flowtype
   - react
   - import
-  - import-order-autofix
 extends:
   - plugin:react/recommended
   - plugin:flowtype/recommended
@@ -32,6 +31,7 @@ rules:
   no-unused-vars:
     - 2
     - argsIgnorePattern: ^_
+    - varsIgnorePattern: ^_
   no-multiple-empty-lines:
     - 2
     - max: 1
@@ -40,13 +40,10 @@ rules:
   # import
   import/newline-after-import: 2
   import/imports-first: 2
-  import/prefer-default-export: 2
   import/no-dynamic-require: 2
   import/no-extraneous-dependencies: 2
   import/no-mutable-exports: 2
   import/no-commonjs: 2
-  # import/order: 2
-  import-order-autofix/order: 2
   # flow
   flowtype/define-flow-type: 1
   flowtype/no-dupe-keys: 2
